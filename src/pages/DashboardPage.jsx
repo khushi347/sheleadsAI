@@ -15,7 +15,6 @@ import {
 } from 'recharts';
 import { useLanguage } from "../context/LanguageContext";
 
-
 const data = [
   { name: 'Mon', demand: 4000, price: 2400 },
   { name: 'Tue', demand: 3000, price: 1398 },
