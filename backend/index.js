@@ -1,11 +1,16 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const scanRoutes = require('./src/routes/scanRoutes');
+const mentorRoutes = require('./src/routes/mentorRoutes');
 
-dotenv.config();
-
+dotenv.config({ path: '.env' });
+console.log("🔑 Environment Variables Loaded:");
+console.log("GEMINI_API_KEY exists:", !!process.env.VITE_GEMINI_API_KEY);
+console.log("Key length:", process.env.VITE_GEMINI_API_KEY?.length || 0);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -19,6 +24,8 @@ app.use('/uploads', express.static('uploads'));
 
 // Routes
 app.use('/api', scanRoutes);
+
+app.use('/api/mentor', mentorRoutes);
 
 // Basic route
 app.get('/', (req, res) => {
