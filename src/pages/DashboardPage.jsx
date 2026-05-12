@@ -14,6 +14,7 @@ import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer 
 } from 'recharts';
 import { useLanguage } from "../context/LanguageContext";
+import { scanProduct } from "../services/api";   
 
 const data = [
   { name: 'Mon', demand: 4000, price: 2400 },
@@ -41,22 +42,35 @@ export function DashboardPage() {
   };
 
   // Called when a file is selected
+    // Called when a file is selected
   const handleFileChange = useCallback(async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
+
     // Reset for next upload
     e.target.value = "";
 
     setUploadError("");
     setIsUploading(true);
+
     try {
-      const result = await analyzeProduct(file);
-      // Pass AI result + image preview URL via navigation state
-      const imageUrl = URL.createObjectURL(file);
-      navigate("/result", { state: { result, imageUrl } });
+      const response = await scanProduct(file);
+      
+      if (response.success && response.aiResult) {
+        const imageUrl = URL.createObjectURL(file);
+        navigate("/result", { 
+          state: { 
+            result: response.aiResult, 
+            imageUrl 
+          } 
+        });
+      } else {
+        throw new Error("Invalid response from server");
+      }
     } catch (err) {
       console.error(err);
-      setUploadError("AI analysis failed. Please try again.");
+      setUploadError(err.message || "AI analysis failed. Please try again.");
+    } finally {
       setIsUploading(false);
     }
   }, [navigate]);

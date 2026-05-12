@@ -69,7 +69,7 @@ export function AIResultPage() {
         </Link>
         {isReal && (
           <Badge variant="success" className="bg-emerald-50 border-emerald-200 text-emerald-700 ml-auto">
-            <Sparkles className="w-3 h-3 mr-1" /> Powered by Gemini AI
+            <Sparkles className="w-3 h-3 mr-1" /> 
           </Badge>
         )}
       </div>
