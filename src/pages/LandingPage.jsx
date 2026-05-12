@@ -76,7 +76,7 @@ export function LandingPage() {
             >
               <Badge variant="accent" className="px-5 py-1.5 text-sm rounded-full backdrop-blur-xl border-accent/30 bg-accent/10 text-accent-light shadow-lg shadow-accent/5 font-medium">
                 <Sparkles className="w-4 h-4 mr-2" />
-                {t("hero_badge")}
+                
               </Badge>
             </motion.div>
             
@@ -211,7 +211,7 @@ export function LandingPage() {
         <div className="absolute bottom-1/4 -right-64 w-[600px] h-[600px] bg-teal-100/50 rounded-full blur-[120px] pointer-events-none mix-blend-multiply animate-float-delayed" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
-            <Badge variant="accent" className="mb-4 bg-secondary/10 border-secondary/30 text-secondary-dark px-4 py-1.5 rounded-full">{t("nav_how_it_works")}</Badge>
+        
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight leading-tight">{t("hiw_title")}</h2>
             <p className="text-slate-600 max-w-2xl mx-auto font-light text-lg">{t("hiw_subtitle")}</p>
           </div>
@@ -410,7 +410,7 @@ export function LandingPage() {
               </div>
             </div>
             <div>
-              <Badge variant="accent" className="mb-4 bg-accent/10 border-accent/30 text-accent-light px-4 py-1.5 rounded-full backdrop-blur-md inline-flex">{t("hero_badge")}</Badge>
+        
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight leading-tight">Elevating India's <span className="text-gradient">Handcrafted Future</span></h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed font-light">Join thousands of women artisans and micro-entrepreneurs who are using SheLeads AI to modernize their business, understand market demand, and scale globally.</p>
               <ul className="space-y-4 mb-8">

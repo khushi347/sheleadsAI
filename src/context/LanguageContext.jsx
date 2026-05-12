@@ -12,7 +12,6 @@ export const translations = {
     nav_get_started: "Get Started",
     
     // Landing Page Hero
-    hero_badge: "Built for WITCHUNT Hackathon",
     hero_title_1: "Empowering Women to Build",
     hero_title_2: "Thriving Businesses",
     hero_subtitle: "Upload a product, get instant pricing guidance, marketing materials, and regional-language mentorship. Your AI partner in entrepreneurship.",
@@ -71,7 +70,6 @@ export const translations = {
     footer_terms: "Terms of Service",
     footer_rights: "All rights reserved.",
     footer_built_with: "Built with",
-    footer_for: "for WITCHUNT Hackathon",
 
     // Auth Page
     auth_welcome_back: "Welcome back",
@@ -160,7 +158,6 @@ export const translations = {
     nav_get_started: "शुरू करें",
     
     // Landing Page Hero
-    hero_badge: "WITCHUNT हैकाथॉन के लिए निर्मित",
     hero_title_1: "महिलाओं को सशक्त बनाना",
     hero_title_2: "सफल व्यापार के लिए",
     hero_subtitle: "अपना उत्पाद फोटो अपलोड करें, सही कीमत जानें, मार्केटिंग के तरीके सीखें और अपनी भाषा में व्यापार सलाह पाएं। उद्यमिता में आपका AI साथी।",
@@ -219,7 +216,7 @@ export const translations = {
     footer_terms: "सेवा की शर्तें",
     footer_rights: "सर्वाधिकार सुरक्षित।",
     footer_built_with: "के साथ बनाया गया",
-    footer_for: "WITCHUNT हैकाथॉन के लिए",
+   
 
     // Auth Page
     auth_welcome_back: "वापसी पर स्वागत है",

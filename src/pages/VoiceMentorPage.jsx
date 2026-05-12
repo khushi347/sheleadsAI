@@ -129,11 +129,11 @@ async function callGemini(userMessage) {
 
     // Pick a female voice if available
     const voices = synthRef.current.getVoices();
-    const preferred = voices.find(
-      (v) => v.lang.startsWith("en") && v.name.toLowerCase().includes("female")
-    ) || voices.find((v) => v.lang.startsWith("en-IN"))
-      || voices.find((v) => v.lang.startsWith("en"))
-      || voices[0];
+    const preferred =
+  voices.find(v => v.lang === "hi-IN") ||
+  voices.find(v => v.lang.startsWith("hi")) ||
+  voices.find(v => v.lang.includes("IN")) ||
+  voices[0];
     if (preferred) utter.voice = preferred;
 
     utter.rate  = 0.95;
